@@ -1,6 +1,8 @@
 # COP3502C: Lab 6: Version Control
 # Preston Hemmy
 
+import decode
+
 def encode_password(password):
     encoded_data = ''
     for i in password:
@@ -13,9 +15,6 @@ def encode_password(password):
 #     for i in encoded_password:
 #         decoded_data += str(int(i) - 3)
 #     return decoded_datagit
-def decode_password(encoded_password):
-    pass
-
 
 if __name__ == '__main__':
     user_encoded = ''
@@ -32,8 +31,8 @@ if __name__ == '__main__':
                 user_encoded = encode_password(user_password)
                 print('Your password has been encoded and stored!')
             elif option_select == '2':
-                # user_decoded = decode_password(user_encoded)
-                # print(f'The encoded password is {user_encoded}, and the original password is {user_decoded}.')
+
+                decode.decode(user_encoded)
                 pass
         else:
             exit()
